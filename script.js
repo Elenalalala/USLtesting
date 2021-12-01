@@ -6,6 +6,7 @@ if (window.vuplex) {
     // The window.vuplex object already exists, so go ahead and send the message.
     document.addEventListener("click", sending)
     sendMessageToCSharp();
+    addMessageListener();
   } else {
     // The window.vuplex object hasn't been initialized yet because the page is still
     // loading, so add an event listener to send the message once it's initialized.
