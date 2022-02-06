@@ -5,6 +5,7 @@ let title = document.getElementById('title');
 if (window.vuplex) {
     // The window.vuplex object already exists, so go ahead and send the message.
     document.addEventListener("click", sending);
+
     addMessageListener();
     console.log("Javascript has finished addMessageListener");
   } else {
@@ -19,6 +20,7 @@ function sending(){
     console.log("successfully send from javascript");
 }
 
+//This is recieveing json function from unity
 function addMessageListener() {
     window.vuplex.addEventListener('message', function(event) {
       let json = event.data;
@@ -28,3 +30,11 @@ function addMessageListener() {
       title.textContent = json;
     });
   }
+
+
+
+function myFunction() {
+    window.vuplex.postMessage({type: "layer", data: {
+        layer: "flood"
+    }})
+}
