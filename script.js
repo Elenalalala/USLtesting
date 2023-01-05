@@ -4,7 +4,7 @@ let title = document.getElementById('title');
 
 if (window.vuplex) {
     // The window.vuplex object already exists, so go ahead and send the message.
-    document.addEventListener("click", sending);
+    title.addEventListener("click", sending);
 
     addMessageListener();
     console.log("Javascript has finished addMessageListener");
