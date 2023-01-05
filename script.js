@@ -1,11 +1,10 @@
 const lat = 321;
 const long = 2333;
 let title = document.getElementById('title');
-
+let link = document.getElementById('external');
 if (window.vuplex) {
     // The window.vuplex object already exists, so go ahead and send the message.
 //     title.addEventListener("click", sending);
-
 //     addMessageListener();
     console.log("Javascript has finished addMessageListener");
   } else {
@@ -37,4 +36,10 @@ function myFunction() {
     window.vuplex.postMessage({type: "layer", data: {
         layer: "flood"
     }})
+}
+
+function sendLink(){
+  window.vuplex.postMessage("https://urbansystemslab.com");
+  console.log("sending a web link!!!");
+  title.textContent = "Link sent";
 }
