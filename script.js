@@ -33,7 +33,7 @@ function addMessageListener() {
 
 
 function myFunction() {
-    window.vuplex.postMessage({type: "layer", data: {
+    window.vuplex.postMessage({type: "ar", data: {
         layer: "flood"
     }})
 }
