@@ -7,9 +7,6 @@ if (window.vuplex) {
     title.addEventListener("click", sending);
     addMessageListener();
     console.log("Javascript has finished addMessageListener");
-    while(true){
-        console.log("Listening");
-    }
   } else {
     // The window.vuplex object hasn't been initialized yet because the page is still
     // loading, so add an event listener to send the message once it's initialized.
