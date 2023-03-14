@@ -5,7 +5,7 @@ let link = document.getElementById('external');
 if (window.vuplex) {
     // The window.vuplex object already exists, so go ahead and send the message.
     title.addEventListener("click", sending);
-//     addMessageListener();
+    addMessageListener();
     console.log("Javascript has finished addMessageListener");
   } else {
     // The window.vuplex object hasn't been initialized yet because the page is still
